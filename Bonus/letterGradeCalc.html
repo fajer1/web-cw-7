@@ -35,7 +35,7 @@
     <script>
       function getLetterGrade() {
         // total القيمة التي تدخلها تُخزن في المتغير
-        var total = document.getElementById("inputNumber").value;
+        var total = document.getElementById("inputNumber").value; 
         // بحيث تتحقق الشروط التالية total قم باختبار قيمة
         /*
             الرقم       الحرف
@@ -44,11 +44,22 @@
               B        80 - 95
               A        90 - 100
         */
-        if (condition) {
+console.log( total)
+        if (total >= 90 ) {
+          document.getElementById("status").innerHTML = "A"; 
+         } 
+          else  if (total >=80 )  {
+          document.getElementById("status").innerHTML = "B"; 
+         }
+        else if (total >=70 ) {
+          document.getElementById("status").innerHTML = "C";
+         } 
+          else if (total >=60 )  {
           document.getElementById("status").innerHTML = "D";
-        }
-        // أكمل
-      }
+         }  else { 
+          document.getElementById("status").innerHTML = "F";
+         }   
+        } 
     </script>
   </body>
-</html>
+</html> 
